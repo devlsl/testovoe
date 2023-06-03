@@ -40,7 +40,7 @@ function Result() {
 function Game() {
   return (
     <>
-      <h1>Что такое useState?</h1>
+      <h1></h1>
     </>
   )
 }
