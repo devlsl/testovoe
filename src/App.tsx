@@ -1,34 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './reset.css'
+import styles from './App.module.scss'
 
-function App() {
-  const [count, setCount] = useState(0)
+const questions = [
+  {
+    title: 'React - это ... ?',
+    variants: ['библиотека', 'фреймворк', 'приложение'],
+    correct: 0
+  },
+  {
+    title: 'Компонент - это ... ',
+    variants: [
+      'приложение',
+      'часть приложения или страницы',
+      'то, что я не знаю что такое'
+    ],
+    correct: 1
+  },
+  {
+    title: 'Что такое JSX?',
+    variants: [
+      'Это простой HTML',
+      'Это функция',
+      'Это тот же HTML, но с возможностью выполнять JS-код'
+    ],
+    correct: 2
+  }
+]
 
+function Result() {
+  return (
+    <div className={styles.result}>
+      <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />
+      <h2>Вы отгадали 3 ответа из 10</h2>
+      <button>Попробовать снова</button>
+    </div>
+  )
+}
+
+function Game() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Что такое useState?</h1>
     </>
+  )
+}
+
+function App() {
+  return (
+    <div className={styles.App}>
+      <Game />
+      {/* <Result /> */}
+    </div>
   )
 }
 
