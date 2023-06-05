@@ -1,10 +1,5 @@
-import { PayloadAction, createReducer, createSlice } from '@reduxjs/toolkit'
-import {
-  AttributeName,
-  Character,
-  SkillLevel,
-  SkillName
-} from '../../../data/character'
+import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { AttributeName, SkillLevel, SkillName } from '../../../data/character'
 import { characterInitialState } from './characterInitialState'
 import { numberPayload } from './types'
 
@@ -54,3 +49,6 @@ const characterSlice = createSlice({
     }
   }
 })
+
+export const { reducer: characterReducer, actions: characterActions } =
+  characterSlice
