@@ -27,30 +27,23 @@ export type SkillLevelName = keyof typeof SkillLevel
 
 export type Words = AttributeName | SkillName | PointsName | SkillLevelName
 
-export interface NumberParam {
-  value: number
-}
-
-export interface Attribute extends NumberParam {
-  name: AttributeName
-}
-
-export interface Points extends NumberParam {
-  name: PointsName
-}
-
-export interface Skill {
-  name: SkillName
-  attribute: AttributeName
-  level: SkillLevel
-}
-
 export type Look = 1 | 2 | 3 | 4 | 5 | 6
+
+export type Attributes = Record<AttributeName, number>
+
+export type Points = Record<PointsName, number>
+
+export type SkillValue = {
+  level: SkillLevel
+  attribute: AttributeName
+}
+export type Skills = Record<SkillName, SkillValue>
 
 export interface Character {
   name: string
   look: Look
-  attributes: Attribute[]
-  points: Points[]
-  skills: Skill[]
+  score: number
+  attributes: Attributes
+  points: Points
+  skills: Skills
 }

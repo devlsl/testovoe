@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import cl from './style.module.scss'
+import styles from './style.module.scss'
 import { Look } from '../../data/character'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { playClickSound } from '../../utils/playClickSound'
@@ -20,11 +20,11 @@ export const LookSelect = () => {
   }, [])
 
   return (
-    <div className={cl.wrapper}>
-      <div className={cl.looks}>
+    <div className={styles.wrapper}>
+      <div className={styles.looks}>
         <img src={`/src/assets/charactersLook/${look}.png`} alt="look" />
       </div>
-      <div className={cl.buttons}>
+      <div className={styles.buttons}>
         <button
           onClick={() => {
             setPrevLook()

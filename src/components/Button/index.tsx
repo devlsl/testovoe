@@ -1,5 +1,6 @@
+import { PropsWithChildren } from 'react'
 import styles from './style.module.scss'
 
-export const Button = () => {
-  return <div className={styles.wrapper}>s</div>
+export const Button = ({ children }: PropsWithChildren) => {
+  return <div className={styles.wrapper}>{children}</div>
 }
