@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { AttributeName, SkillLevel, SkillName } from '../../../data/character'
-import { characterInitialState } from './characterInitialState'
+import { characterInitialState } from './initialState'
 import { numberPayload } from './types'
 
 const characterSlice = createSlice({
