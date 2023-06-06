@@ -1,7 +1,21 @@
 .wrapper {
   display: flex;
   position: absolute;
-  top: 10px;
-  left: 10px;
-  border: 2px solid red;
+  top: 30px;
+  left: 30px;
+  // border: 10px solid red;
+  flex-direction: row;
+  gap: 10px;
+
+  .block {
+    display: flex;
+    gap: 5px;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+    }
+  }
 }

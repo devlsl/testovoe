@@ -1,13 +1,13 @@
 // English as a default
 
-import { Words } from '../character'
+import { Words } from '../locale/words'
 
-export const locales = ['ru', 'en'] as const
+export const langs = ['ru', 'en'] as const
 
-export type Locale = (typeof locales)[number]
+export type Lang = (typeof langs)[number]
 
-export type LocaleItem = Record<Locale, string>
+export type LocaleItem = Record<Lang, string>
 
-export type Translate = {
+export type Locale = {
   [word in Words]: LocaleItem
 }

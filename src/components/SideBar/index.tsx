@@ -1,11 +1,11 @@
 import styles from './style.module.scss'
 import { Button } from '../Button'
-import { Locale, locales } from '../../data/locale/types'
+import { Lang, langs } from '../../data/locale/types'
 import { useAppDispatch, useAppSelector } from '../../hooks/store'
 import { TbMusicOff, TbMusic } from 'react-icons/tb'
 import { MdVolumeUp, MdVolumeOff } from 'react-icons/md'
 import { appActions } from '../../store/slices/app'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { play } from '../../utils/playSound'
 import backMusicPath from '../../assets/sounds/backMusic.mp3'
 
@@ -23,7 +23,6 @@ export const SideBar = () => {
   const toggleMusicHandler = () => {
     // bad (probably this logic should be implemented using middleware)
     if (appState.musicIsOn) {
-      console.log('on')
       musicStopMethods.forEach((stop) => stop())
       clearInterval(musicInterval)
     } else {
@@ -31,22 +30,20 @@ export const SideBar = () => {
       setMusicInterval(
         setInterval(() => {
           setMusicStopMethods(musicStopMethods.concat(play(backMusicPath)))
-        }, 6000)
+        }, 98000)
       )
     }
 
     dispatch(appActions.toggleMusic())
   }
 
-  useEffect(() => console.log(musicStopMethods.length), [musicStopMethods])
-
-  const setLocaleHandler = (locale: Locale) => {
-    dispatch(appActions.setLocale(locale))
+  const setLocaleHandler = (lang: Lang) => {
+    dispatch(appActions.setLang(lang))
   }
 
   return (
-    <div className="wrapper">
-      <div className="soundBlock">
+    <div className={styles.wrapper}>
+      <div className={styles.block}>
         <Button onClick={toggleMusicHandler} selected={appState.musicIsOn}>
           {appState.musicIsOn ? <TbMusic /> : <TbMusicOff />}
         </Button>
@@ -54,13 +51,13 @@ export const SideBar = () => {
           {appState.soundsIsOn ? <MdVolumeUp /> : <MdVolumeOff />}
         </Button>
       </div>
-      <div className="localeBlock">
-        {locales.map((locale) => (
+      <div className={styles.block}>
+        {langs.map((lang) => (
           <Button
-            selected={appState.locale === locale}
-            onClick={() => setLocaleHandler(locale)}
+            selected={appState.lang === lang}
+            onClick={() => setLocaleHandler(lang)}
           >
-            {locale}
+            {lang}
           </Button>
         ))}
       </div>

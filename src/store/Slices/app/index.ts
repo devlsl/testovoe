@@ -1,12 +1,12 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { Locale } from '../../../data/locale/types'
+import { Lang } from '../../../data/locale/types'
 
 const appSlice = createSlice({
   name: 'app',
   initialState: {
     soundsIsOn: false,
     musicIsOn: false,
-    locale: 'ru' as Locale,
+    lang: 'ru' as Lang,
     musicStopMethods: [] as (() => void)[],
     musicInterval: undefined as number | undefined
   },
@@ -17,10 +17,10 @@ const appSlice = createSlice({
     toggleMusic(state) {
       state.musicIsOn = !state.musicIsOn
     },
-    setLocale(state, action: PayloadAction<Locale>) {
-      console.log('1locale is', state.locale)
-      state.locale = action.payload
-      console.log('1locale is', state.locale)
+    setLang(state, action: PayloadAction<Lang>) {
+      console.log('1locale is', state.lang)
+      state.lang = action.payload
+      console.log('1locale is', state.lang)
     }
   }
 })

@@ -1,5 +1,10 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { AttributeName, SkillLevel, SkillName } from '../../../data/character'
+import {
+  AttributeName,
+  Look,
+  SkillLevel,
+  SkillName
+} from '../../../data/character'
 import { characterInitialState } from './initialState'
 import { numberPayload } from './types'
 
@@ -46,6 +51,12 @@ const characterSlice = createSlice({
     },
     upScore(state, action: numberPayload) {
       state.score += action.payload
+    },
+    setPrevLook(state) {
+      state.look = (state.look === 1 ? 6 : state.look - 1) as Look
+    },
+    setNextLook(state) {
+      state.look = (state.look === 6 ? 1 : state.look + 1) as Look
     }
   }
 })

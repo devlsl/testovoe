@@ -2,22 +2,13 @@ import { useEffect, useState } from 'react'
 import styles from './style.module.scss'
 import { Look } from '../../data/character'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
-import { playClickSound } from '../../utils/playClickSound'
+import { Button } from '../Button'
+import { useAppDispatch, useAppSelector } from '../../hooks/store'
+import { characterActions } from '../../store/slices/character'
 
 export const LookSelect = () => {
-  const [look, setLook] = useState<Look>(1)
-
-  const setPrevLook = () => {
-    setLook((prev) => (prev === 1 ? 6 : prev - 1) as Look)
-  }
-
-  const setNextLook = () => {
-    setLook((prev) => (prev === 6 ? 1 : prev + 1) as Look)
-  }
-
-  useEffect(() => {
-    console.log(look)
-  }, [])
+  const dispatch = useAppDispatch()
+  const look = useAppSelector((state) => state.character.look)
 
   return (
     <div className={styles.wrapper}>
@@ -25,22 +16,12 @@ export const LookSelect = () => {
         <img src={`/src/assets/charactersLook/${look}.png`} alt="look" />
       </div>
       <div className={styles.buttons}>
-        <button
-          onClick={() => {
-            setPrevLook()
-            playClickSound()
-          }}
-        >
+        <Button onClick={() => dispatch(characterActions.setPrevLook())}>
           <MdKeyboardArrowLeft size={40} />
-        </button>
-        <button
-          onClick={() => {
-            setNextLook()
-            playClickSound()
-          }}
-        >
+        </Button>
+        <Button onClick={() => dispatch(characterActions.setNextLook())}>
           <MdKeyboardArrowRight size={40} />
-        </button>
+        </Button>
       </div>
     </div>
   )

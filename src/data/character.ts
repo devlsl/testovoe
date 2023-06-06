@@ -25,8 +25,6 @@ export enum SkillLevel {
 
 export type SkillLevelName = keyof typeof SkillLevel
 
-export type Words = AttributeName | SkillName | PointsName | SkillLevelName
-
 export type Look = 1 | 2 | 3 | 4 | 5 | 6
 
 export type Attributes = Record<AttributeName, number>
