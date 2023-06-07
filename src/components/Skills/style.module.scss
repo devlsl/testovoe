@@ -1,0 +1,24 @@
+.wrapper {
+  * {
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+  }
+
+  width: 470px;
+
+  h3 {
+    font-size: 27px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: var(--border-radius);
+  border: 4px solid rgba(0, 0, 0, 0.2);
+}

@@ -1,6 +1,26 @@
 import { Locale } from './types'
 
 export const locale: Locale = {
+  error: {
+    en: 'error',
+    ru: 'ошибка'
+  },
+  skills: {
+    en: 'skills',
+    ru: 'способности'
+  },
+  fight: {
+    en: 'fight',
+    ru: 'в бой'
+  },
+  attributes: {
+    en: 'attributes',
+    ru: 'атрибуты'
+  },
+  'up score': {
+    en: 'up score',
+    ru: 'заработать очки'
+  },
   change: {
     en: 'change',
     ru: 'изменить'

@@ -10,12 +10,14 @@ export interface ButtonProps
   children: React.ReactNode
   onClick: (event?: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
   selected?: boolean
+  offClickSound?: boolean
 }
 
 export const Button = ({
   children,
   selected = false,
   onClick,
+  offClickSound = false,
   ...other
 }: ButtonProps) => {
   const soundIsOn = useAppSelector((state) => state.app.soundsIsOn)
@@ -29,8 +31,11 @@ export const Button = ({
       onMouseDown={(e) => {
         e.preventDefault()
       }}
+      onSelect={(e) => {
+        e.preventDefault()
+      }}
       onClick={() => {
-        if (soundIsOn) playClickSound()
+        if (soundIsOn && !offClickSound) playClickSound()
         onClick()
       }}
       className={selected ? styles.wrapperSelected : styles.wrapper}

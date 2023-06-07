@@ -7,6 +7,16 @@ import {
 
 type CharacterWords = AttributeName | SkillName | PointsName | SkillLevelName
 
-type AnotherWords = 'score' | 'up' | 'down' | 'name' | 'change'
+type AnotherWords =
+  | 'score'
+  | 'up'
+  | 'down'
+  | 'name'
+  | 'change'
+  | 'up score'
+  | 'attributes'
+  | 'fight'
+  | 'skills'
+  | 'error'
 
 export type Words = CharacterWords | AnotherWords

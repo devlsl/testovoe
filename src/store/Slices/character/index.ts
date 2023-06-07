@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import {
   AttributeName,
+  Character,
   Look,
   SkillLevel,
   SkillName
@@ -40,14 +41,37 @@ const characterSlice = createSlice({
     },
     levelUpAttribute(state, action: PayloadAction<AttributeName>) {
       if (state.score <= 0) return
+
+      switch (action.payload) {
+        case 'strength':
+          state.attributes.strength += 1
+          state.points.health += 1
+          break
+        case 'agility':
+          state.attributes.agility += 1
+          state.points.dodge += 1
+          state.points.energy += 1
+          break
+        case 'intelligence':
+          state.attributes.intelligence += 1
+          state.points.energy += 1
+          break
+        case 'charisma':
+          state.attributes.charisma += 1
+          break
+        default:
+          break
+      }
       state.attributes[action.payload] += 1
+      state.score -= 1
     },
     levelUpSkill(state, action: PayloadAction<SkillName>) {
       if (state.score <= 0) return
       const skill = state.skills[action.payload]
-      if (state.attributes[skill.attribute] >= skill.level) return
+      if (state.attributes[skill.attribute] <= skill.level) return
       if (skill.level === SkillLevel.master) return
       skill.level += 1
+      state.score -= 1
     },
     upScore(state, action: numberPayload) {
       state.score += action.payload
@@ -57,6 +81,9 @@ const characterSlice = createSlice({
     },
     setNextLook(state) {
       state.look = (state.look === 6 ? 1 : state.look + 1) as Look
+    },
+    setNewCharacter(_state, action: PayloadAction<Character>) {
+      return action.payload
     }
   }
 })

@@ -14,21 +14,27 @@ export interface AttributeElementProps {
 export const AttributeElement = ({ name }: AttributeElementProps) => {
   const score = useAppSelector((state) => state.character.score)
   const lang = useAppSelector((state) => state.app.lang)
+  const attributeValue = useAppSelector(
+    (state) => state.character.attributes[name]
+  )
 
   const dispatch = useAppDispatch()
 
   return (
     <div className={styles.wrapper}>
-      <h2>
-        {word('score', lang, true)}: {score}
-      </h2>
+      <div className={styles.horizontal}>
+        <div className={styles.attribute}>
+          {word(name, lang, true)}: {attributeValue}
+        </div>
 
-      <Button onClick={() => dispatch(characterActions.levelUpAttribute(name))}>
-        {word('up', lang)}
-      </Button>
-      <Button onClick={() => dispatch(characterActions.levelUpAttribute(name))}>
-        {word('down', lang)}
-      </Button>
+        {score ? (
+          <Button
+            onClick={() => dispatch(characterActions.levelUpAttribute(name))}
+          >
+            {word('up', lang)}
+          </Button>
+        ) : null}
+      </div>
     </div>
   )
 }

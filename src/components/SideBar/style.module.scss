@@ -3,12 +3,12 @@
   position: absolute;
   top: 30px;
   left: 30px;
-  // border: 10px solid red;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
 
   .block {
     display: flex;
+    flex-direction: column;
     gap: 5px;
 
     div {
@@ -18,4 +18,13 @@
       font-size: 30px;
     }
   }
+}
+
+.inputFile input[type='file'] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
 }
