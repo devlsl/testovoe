@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/store'
 import styles from './style.module.scss'
 import { characterActions } from '../../store/slices/character'

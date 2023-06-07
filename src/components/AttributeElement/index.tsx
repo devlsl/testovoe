@@ -3,8 +3,6 @@ import { AttributeName } from '../../data/character'
 import { useAppDispatch, useAppSelector } from '../../hooks/store'
 import { Button } from '../Button'
 import { characterActions } from '../../store/slices/character'
-import { locale } from '../../data/locale'
-import { useLocale } from '../../hooks/useLocale'
 import { word } from '../../utils/word'
 
 export interface AttributeElementProps {

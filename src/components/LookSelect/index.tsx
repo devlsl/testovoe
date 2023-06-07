@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react'
 import styles from './style.module.scss'
-import { Look } from '../../data/character'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { Button } from '../Button'
 import { useAppDispatch, useAppSelector } from '../../hooks/store'

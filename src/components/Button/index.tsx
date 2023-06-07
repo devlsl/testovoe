@@ -1,6 +1,5 @@
 import { PropsWithChildren } from 'react'
 import styles from './style.module.scss'
-import { useSelector } from 'react-redux'
 import { useAppSelector } from '../../hooks/store'
 import { playClickSound } from '../../utils/playClickSound'
 

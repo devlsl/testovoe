@@ -44,20 +44,14 @@ const characterSlice = createSlice({
 
       switch (action.payload) {
         case 'strength':
-          state.attributes.strength += 1
           state.points.health += 1
           break
         case 'agility':
-          state.attributes.agility += 1
           state.points.dodge += 1
           state.points.energy += 1
           break
         case 'intelligence':
-          state.attributes.intelligence += 1
           state.points.energy += 1
-          break
-        case 'charisma':
-          state.attributes.charisma += 1
           break
         default:
           break
