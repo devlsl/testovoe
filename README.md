@@ -1,9 +1,9 @@
-testovoe
+Testovoe
 
 This is an app (pet project) written in React.js using typescript for types and redux-toolkit as a state manager.
 This repository is a front end. If you want to try playing with this, follow the manual.
 
-## manual (simply)
+## manual
 
 #### Step 1
 
