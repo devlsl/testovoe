@@ -48,7 +48,7 @@ or
   npm run dev
 ```
 
-App automaticly starts on 5173 post.
+App automaticly starts on 5173 port
 
 Follow the [link](http://localhost:5173/)
 
