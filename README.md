@@ -18,6 +18,21 @@ Clone repository with server using command git clone
 run the command 
 
 ```
+  yarn
+```
+
+or 
+
+```
+  npm install
+```
+
+
+#### Step 3
+
+run the command 
+
+```
   yarn dev
 ```
 
