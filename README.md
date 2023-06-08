@@ -13,6 +13,12 @@ Clone repository with app using command git clone
   git clone https://github.com/devlsl/testovoe.git testovoe
 ```
 
+And go to the directory with app
+
+```
+  cd testovoe
+```
+
 #### Step 2
 
 Run the command 
