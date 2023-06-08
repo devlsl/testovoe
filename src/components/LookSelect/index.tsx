@@ -11,7 +11,7 @@ export const LookSelect = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.looks}>
-        <img src={`/src/assets/charactersLook/${look}.png`} alt="look" />
+        <img src={`/assets/charactersLook/${look}.png`} alt="look" />
       </div>
       <div className={styles.buttons}>
         <Button onClick={() => dispatch(characterActions.setPrevLook())}>
