@@ -7,7 +7,7 @@ This repository is a front end. If you want to try playing with this, follow the
 
 #### Step 1
 
-Clone repository with server using command git clone
+Clone repository with app using command git clone
 
 ```
   git clone https://github.com/devlsl/testovoe.git testovoe
@@ -15,7 +15,7 @@ Clone repository with server using command git clone
 
 #### Step 2
 
-run the command 
+Run the command 
 
 ```
   yarn
@@ -30,7 +30,7 @@ or
 
 #### Step 3
 
-run the command 
+Run the command 
 
 ```
   yarn dev
