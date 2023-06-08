@@ -1,7 +1,7 @@
+import { SideBar } from 'components/SideBar'
 import '../../reset.css'
-import { Game } from '../Game'
-import { SideBar } from '../SideBar'
 import styles from './style.module.scss'
+import { Game } from 'components/Game'
 
 export const App = () => {
   return (

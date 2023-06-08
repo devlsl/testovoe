@@ -1,8 +1,8 @@
+import { useAppDispatch, useAppSelector } from 'hooks/store'
 import styles from './style.module.scss'
+import { characterActions } from 'store/slices/character'
+import { Button } from 'components/Button'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
-import { Button } from '../Button'
-import { useAppDispatch, useAppSelector } from '../../hooks/store'
-import { characterActions } from '../../store/slices/character'
 
 export const LookSelect = () => {
   const dispatch = useAppDispatch()

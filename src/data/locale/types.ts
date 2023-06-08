@@ -1,6 +1,6 @@
 // English as a default
 
-import { Words } from '../locale/words'
+import { Words } from 'data/locale/words'
 
 export const langs = ['ru', 'en'] as const
 

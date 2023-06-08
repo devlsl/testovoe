@@ -1,4 +1,4 @@
-import { Character, SkillLevel } from '../../../data/character'
+import { Character, SkillLevel } from 'data/character'
 
 export const characterInitialState: Character = {
   name: '',

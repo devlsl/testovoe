@@ -1,10 +1,10 @@
+import { SkillLevel, SkillName } from 'data/character'
 import styles from './style.module.scss'
-import { SkillLevel, SkillName } from '../../data/character'
-import { useAppDispatch, useAppSelector } from '../../hooks/store'
-import { Button } from '../Button'
-import { characterActions } from '../../store/slices/character'
+import { useAppDispatch, useAppSelector } from 'hooks/store'
 import { word } from '../../utils/word'
-import { Words } from '../../data/locale/words'
+import { Words } from 'data/locale/words'
+import { characterActions } from 'store/slices/character'
+import { Button } from 'components/Button'
 
 export interface SkillElementProps {
   name: SkillName

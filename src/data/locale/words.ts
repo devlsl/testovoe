@@ -3,7 +3,7 @@ import {
   PointsName,
   SkillLevelName,
   SkillName
-} from '../character'
+} from 'data/character'
 
 type CharacterWords = AttributeName | SkillName | PointsName | SkillLevelName
 

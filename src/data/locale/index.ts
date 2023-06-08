@@ -1,4 +1,4 @@
-import { Locale } from './types'
+import { Locale } from 'data/locale/types'
 
 export const locale: Locale = {
   error: {

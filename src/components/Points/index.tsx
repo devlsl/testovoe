@@ -1,7 +1,7 @@
-import { PointsName } from '../../data/character'
-import { useAppSelector } from '../../hooks/store'
-import { PointsElement } from '../PointsElements'
+import { useAppSelector } from 'hooks/store'
 import styles from './style.module.scss'
+import { PointsElement } from 'components/PointsElements'
+import { PointsName } from 'data/character'
 
 export const Points = () => {
   const pointsNames = useAppSelector((state) =>

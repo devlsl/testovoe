@@ -1,10 +1,10 @@
-import { AttributeName } from '../../data/character'
-import { useAppDispatch, useAppSelector } from '../../hooks/store'
-import { characterActions } from '../../store/slices/character'
-import { word } from '../../utils/word'
-import { AttributeElement } from '../AttributeElement'
-import { Button } from '../Button'
+import { useAppDispatch, useAppSelector } from 'hooks/store'
 import styles from './style.module.scss'
+import { word } from '../../utils/word'
+import { characterActions } from 'store/slices/character'
+import { Button } from 'components/Button'
+import { AttributeElement } from 'components/AttributeElement'
+import { AttributeName } from 'data/character'
 
 export const Attributes = () => {
   const attributeNames = useAppSelector((state) =>

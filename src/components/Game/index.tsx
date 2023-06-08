@@ -1,14 +1,14 @@
+import { useAppDispatch, useAppSelector } from 'hooks/store'
 import styles from './style.module.scss'
-import { LookSelect } from '../LookSelect'
-import { NameSelect } from '../NameSelect'
-import { Attributes } from '../Attributes'
-import { Points } from '../Points'
-import { useAppDispatch, useAppSelector } from '../../hooks/store'
-import { characterActions } from '../../store/slices/character'
+import { characterActions } from 'store/slices/character'
+import { LookSelect } from 'components/LookSelect'
+import { Button } from 'components/Button'
 import { word } from '../../utils/word'
-import { Button } from '../Button'
+import { NameSelect } from 'components/NameSelect'
+import { Attributes } from 'components/Attributes'
+import { Points } from 'components/Points'
+import { Skills } from 'components/Skills'
 import { playFightSound } from '../../utils/playFightSound'
-import { Skills } from '../Skills'
 
 export const Game = () => {
   const [lang, soundsIsOn, health] = useAppSelector((state) => [
@@ -20,7 +20,9 @@ export const Game = () => {
 
   const fightHandler = () => {
     dispatch(characterActions.takeDamage())
-    if (soundsIsOn) playFightSound()
+    if (soundsIsOn) {
+      playFightSound()
+    }
   }
 
   return (

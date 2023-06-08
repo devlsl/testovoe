@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { Lang } from '../../../data/locale/types'
+import { Lang } from 'data/locale/types'
 
 const appSlice = createSlice({
   name: 'app',

@@ -1,4 +1,4 @@
-import { Character } from '../data/character'
+import { Character } from 'data/character'
 
 export const isCharacter = (obj: Character): obj is Character => {
   if (obj.name === undefined) return false

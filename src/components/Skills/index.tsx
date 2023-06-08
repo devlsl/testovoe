@@ -1,8 +1,8 @@
-import { SkillName } from '../../data/character'
-import { useAppSelector } from '../../hooks/store'
-import { word } from '../../utils/word'
-import { SkillElement } from '../SkillElement'
+import { useAppSelector } from 'hooks/store'
 import styles from './style.module.scss'
+import { word } from '../../utils/word'
+import { SkillElement } from 'components/SkillElement'
+import { SkillName } from 'data/character'
 
 export const Skills = () => {
   const SkillNames = useAppSelector((state) =>

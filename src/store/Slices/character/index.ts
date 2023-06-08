@@ -5,9 +5,9 @@ import {
   Look,
   SkillLevel,
   SkillName
-} from '../../../data/character'
-import { characterInitialState } from './initialState'
-import { numberPayload } from './types'
+} from 'data/character'
+import { characterInitialState } from 'store/slices/character/initialState'
+import { numberPayload } from 'store/slices/character/types'
 
 const characterSlice = createSlice({
   name: 'character',

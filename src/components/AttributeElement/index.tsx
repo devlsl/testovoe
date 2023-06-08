@@ -1,9 +1,9 @@
+import { AttributeName } from 'data/character'
 import styles from './style.module.scss'
-import { AttributeName } from '../../data/character'
-import { useAppDispatch, useAppSelector } from '../../hooks/store'
-import { Button } from '../Button'
-import { characterActions } from '../../store/slices/character'
+import { useAppDispatch, useAppSelector } from 'hooks/store'
 import { word } from '../../utils/word'
+import { Button } from 'components/Button'
+import { characterActions } from 'store/slices/character'
 
 export interface AttributeElementProps {
   name: AttributeName

@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../../hooks/store'
+import { useAppDispatch, useAppSelector } from 'hooks/store'
 import styles from './style.module.scss'
-import { characterActions } from '../../store/slices/character'
-import { Button } from '../Button'
+import { useState } from 'react'
+import { characterActions } from 'store/slices/character'
 import { word } from '../../utils/word'
+import { Button } from 'components/Button'
 
 export const NameSelect = () => {
   const dispatch = useAppDispatch()
