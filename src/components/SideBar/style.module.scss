@@ -1,4 +1,8 @@
 .wrapper {
+  @media screen and (max-width: 1320px) {
+    z-index: 99;
+  }
+  
   display: flex;
   position: absolute;
   top: 30px;
