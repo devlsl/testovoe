@@ -11,7 +11,8 @@ export interface AttributeElementProps {
 }
 
 export const AttributeElement = ({ name }: AttributeElementProps) => {
-  const score = useAppSelector((state: RootState) => state.character.score)
+  const score = useAppSelector((state) => state.character.score)
+
   const lang = useAppSelector((state: RootState) => state.app.lang)
   const attributeValue = useAppSelector(
     (state: RootState) => state.character.attributes[name]
