@@ -1,6 +1,6 @@
 import { useAppSelector } from 'hooks/store'
 import styles from './style.module.scss'
-import { word } from '../../utils/word'
+import { word } from 'utils/word'
 import { SkillElement } from 'components/SkillElement'
 import { SkillName } from 'data/character'
 

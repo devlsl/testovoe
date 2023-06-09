@@ -1,7 +1,7 @@
 import { AttributeName } from 'data/character'
 import styles from './style.module.scss'
 import { useAppDispatch, useAppSelector } from 'hooks/store'
-import { word } from '../../utils/word'
+import { word } from 'utils/word'
 import { Button } from 'components/Button'
 import { characterActions } from 'store/slices/character'
 

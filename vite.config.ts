@@ -15,7 +15,8 @@ export default defineConfig({
       locale: '/src/data/locale',
       store: '/src/store',
       slices: '/src/store/slices',
-      assets: '/src/assets'
+      assets: '/src/assets',
+      utils: '/src/utils'
     }
   }
 })

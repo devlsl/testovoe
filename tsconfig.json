@@ -24,7 +24,8 @@
       "locale/*": ["data/locale/*"],
       "store/*": ["store/*"],
       "slices/*": ["store/slices/*"],
-      "assets/*": ["assets/*"]
+      "assets/*": ["assets/*"],
+      "utils/*": ["utils/*"]
     }
   },
   "include": ["src"],

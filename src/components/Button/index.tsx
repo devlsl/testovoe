@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react'
 import styles from './style.module.scss'
 import { useAppSelector } from 'hooks/store'
-import { playClickSound } from '../../utils/playClickSound'
+import { playClickSound } from 'utils/playClickSound'
 
 export interface ButtonProps
   extends PropsWithChildren,

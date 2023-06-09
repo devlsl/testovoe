@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from 'hooks/store'
 import styles from './style.module.scss'
 import { useState } from 'react'
 import { characterActions } from 'store/slices/character'
-import { word } from '../../utils/word'
+import { word } from 'utils/word'
 import { Button } from 'components/Button'
 
 export const NameSelect = () => {

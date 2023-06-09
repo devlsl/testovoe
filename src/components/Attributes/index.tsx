@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from 'hooks/store'
 import styles from './style.module.scss'
-import { word } from '../../utils/word'
+import { word } from 'utils/word'
 import { characterActions } from 'store/slices/character'
 import { Button } from 'components/Button'
 import { AttributeElement } from 'components/AttributeElement'
