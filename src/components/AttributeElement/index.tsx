@@ -4,16 +4,17 @@ import { useAppDispatch, useAppSelector } from 'hooks/store'
 import { word } from 'utils/word'
 import { Button } from 'components/Button'
 import { characterActions } from 'store/slices/character'
+import { RootState } from 'store/index'
 
 export interface AttributeElementProps {
   name: AttributeName
 }
 
 export const AttributeElement = ({ name }: AttributeElementProps) => {
-  const score = useAppSelector((state) => state.character.score)
-  const lang = useAppSelector((state) => state.app.lang)
+  const score = useAppSelector((state: RootState) => state.character.score)
+  const lang = useAppSelector((state: RootState) => state.app.lang)
   const attributeValue = useAppSelector(
-    (state) => state.character.attributes[name]
+    (state: RootState) => state.character.attributes[name]
   )
 
   const dispatch = useAppDispatch()

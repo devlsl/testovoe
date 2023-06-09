@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react'
 import styles from './style.module.scss'
 import { useAppSelector } from 'hooks/store'
 import { playClickSound } from 'utils/playClickSound'
+import { RootState } from 'store/index'
 
 export interface ButtonProps
   extends PropsWithChildren,
@@ -19,7 +20,7 @@ export const Button = ({
   offClickSound = false,
   ...other
 }: ButtonProps) => {
-  const soundIsOn = useAppSelector((state) => state.app.soundsIsOn)
+  const soundIsOn = useAppSelector((state: RootState) => state.app.soundsIsOn)
 
   return (
     <div

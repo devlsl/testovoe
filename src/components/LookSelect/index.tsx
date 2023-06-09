@@ -3,10 +3,11 @@ import styles from './style.module.scss'
 import { characterActions } from 'store/slices/character'
 import { Button } from 'components/Button'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
+import { RootState } from 'store/index'
 
 export const LookSelect = () => {
   const dispatch = useAppDispatch()
-  const look = useAppSelector((state) => state.character.look)
+  const look = useAppSelector((state: RootState) => state.character.look)
 
   return (
     <div className={styles.wrapper}>

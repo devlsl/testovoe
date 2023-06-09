@@ -4,12 +4,13 @@ import { useState } from 'react'
 import { characterActions } from 'store/slices/character'
 import { word } from 'utils/word'
 import { Button } from 'components/Button'
+import { RootState } from 'store/index'
 
 export const NameSelect = () => {
   const dispatch = useAppDispatch()
-  const name = useAppSelector((state) => state.character.name)
+  const name = useAppSelector((state: RootState) => state.character.name)
 
-  const lang = useAppSelector((state) => state.app.lang)
+  const lang = useAppSelector((state: RootState) => state.app.lang)
 
   const [newName, setNewName] = useState<string>(name)
 

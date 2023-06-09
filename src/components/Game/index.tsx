@@ -9,9 +9,10 @@ import { Attributes } from 'components/Attributes'
 import { Points } from 'components/Points'
 import { Skills } from 'components/Skills'
 import { playFightSound } from 'utils/playFightSound'
+import { RootState } from 'store/index'
 
 export const Game = () => {
-  const [lang, soundsIsOn, health] = useAppSelector((state) => [
+  const [lang, soundsIsOn, health] = useAppSelector((state: RootState) => [
     state.app.lang,
     state.app.soundsIsOn,
     state.character.points.health

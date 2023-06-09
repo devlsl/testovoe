@@ -13,9 +13,10 @@ import { Button } from 'components/Button'
 import { TbMusic, TbMusicOff } from 'react-icons/tb'
 import { MdVolumeUp, MdVolumeOff } from 'react-icons/md'
 import { BiImport, BiExport } from 'react-icons/bi'
+import { RootState } from 'store/index'
 
 export const SideBar = () => {
-  const appState = useAppSelector((state) => state.app)
+  const appState = useAppSelector((state: RootState) => state.app)
   const dispatch = useAppDispatch()
 
   const character = useAppSelector((state) => state.character)
